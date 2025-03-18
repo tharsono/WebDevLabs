@@ -35,8 +35,8 @@ function findTheBanana(fruit){
     }
 }
 
-L1.forEach(findTheBanana)
-L2.forEach(findTheBanana)
+//L1.forEach(findTheBanana)
+//L2.forEach(findTheBanana)
 
 function greetingFunc(){
     let E = document.getElementById("time")
@@ -55,8 +55,56 @@ function greetingFunc(){
     }
 }
 
-greetingFunc()
+function addYear(){
+    let E = document.getElementById("copyYear")
+    const d = new Date();
+    let year = d.getFullYear();
+    E.innerHTML += " "+ year
+}
 
-if (window.location.pathname == "../WebDevLabs/index.html"){
+function showList(){
+    var l = document.getElementById("list")
+    if (l.style.display == "block"){
+        l.style.display = "none"
+    }else{
+        l.style.display = "block"
+    }
+}
+
+$(document).ready(function(){
+    $(".hideBio").click(function(){
+      $("#bio").hide();
+    });
+    $(".showBio").click(function(){
+      $("#bio").show();
+    });
+  });
+
+function validateForm(){
+    let fname = document.getElementById("fname")
+    let email = document.getElementById("email")
+    let comment = document.getElementById("comment")
+
+    let isValid = true;
+    let errorMsg = document.getElementById("error")
+    
+    if (!fname.checkValidity()) {
+        isValid = false;
+    }
+    if (!email.checkValidity()) {
+        isValid = false;
+    }
+
+    if (!comment.checkValidity()) {
+        isValid = false;
+    }
+    if (!isValid) {
+        errorMsg.style.display = "block"
+    } else {
+        errorMsg.style.display = "none"
+    }
+}
+
+if (window.location.pathname == "/index.html"){
     greetingFunc()
 }

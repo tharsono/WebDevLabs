@@ -11,10 +11,11 @@
     <meta name="keywords" content="Carnegie Mellon University, Information Systems">
     <meta name="description" content="Your name professional website">
     <title>Your name</title>
-    <script src="../WebDevLabs/static/script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script src="../static/script.js" defer></script>
 </head>
 
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Trish Harsono</h1>
         <nav class = "menu">
@@ -27,12 +28,18 @@
     <div></div>
         <h2 id = "time">Hi, my name is Trish</h2>
         <img src="static/trish.jpg" alt="trish" width = "150" height="225">
+        <div></div>
+        <button class = "showBio"> Show more</button>
+        <button class = "hideBio"> Show less</button>
         <p id="intro">
-            Im a freshman studying Information Systems at Carnegie Mellon University. 
+            I'm a freshman studying Information Systems at Carnegie Mellon University. 
             I'm from Jakarta, Indonesia. 
         </p>
-    <footer>
-        <p>&copy; 2025 Trish Harsono</p>
+        <p id ="bio">
+            I'm currently exploring interests in software engineering, project management, and human computer interations.
+        </p>
+    <footer id="copyYear">
+        <p>&copy;Trish Harsono</p>
     </footer>
 </body>
 </html>

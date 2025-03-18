@@ -11,10 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
     <script src="../static/script.js" defer></script>
 </head>
     
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Trish Harsono</h1>
         <nav class = "menu">
@@ -26,7 +27,8 @@
     </header>
     <div></div>
         <h2>Things I love to do for fun</h2>
-        <ul>
+        <button onclick="showList()" >Click to see...</button>
+        <ul id = "list">
             <li>
                 Crochet
             </li>
@@ -42,8 +44,8 @@
         </ul>
 
     
-        <footer>
-            <p>&copy; 2025 Trish Harsono</p>
+        <footer id="copyYear">
+            <p>&copy;Trish Harsono</p>
         </footer>
 </body>
 </html>

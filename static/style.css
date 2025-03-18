@@ -37,4 +37,17 @@ tbody tr:nth-child(odd){
     text-align: center;
 }
 
+#list {
+    display: none;
+}
 
+#bio{
+    display: none;
+}
+
+#error{
+    display: none;
+    text-align: center;
+    font-weight: bold;
+    color: #c58ea6;
+}
