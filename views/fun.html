@@ -25,9 +25,12 @@
             <a href="fun.html">For fun</a>
         </nav>
     </header>
-    <div></div>
+    <div class = "mainLayout">
+        <div id = "item1">
         <h2>Things I love to do for fun</h2>
+        <!--
         <button onclick="showList()" >Click to see...</button>
+        -->
         <ul id = "list">
             <li>
                 Crochet
@@ -42,7 +45,23 @@
                 Cook and bake
             </li>
         </ul>
+        </div>
+        <div id = "item2">
+            <img class = "funIMG" src="../static/matcha.jpg" alt="matcha" height="300" width = "200">
+        </div>
+    <div id = "item3">
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/cI0S-kT7x6M&t=387s&ab_channel=Nino%27sHome" title="coffeebread"></iframe>
+    </div>
 
+    <div id = "item4">
+        <div class = "container">
+            <h2>Need some advice?</h2>
+            <p id = "adviceText">Click the button to get a random piece of advice</p>
+            <button onclick="getAdvice()"> Click me</button>
+        </div>
+    </div>
+    </div>
+        
     
         <footer id="copyYear">
             <p>&copy;Trish Harsono</p>

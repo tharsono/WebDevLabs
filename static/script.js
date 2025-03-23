@@ -62,14 +62,14 @@ function addYear(){
     E.innerHTML += " "+ year
 }
 
-function showList(){
-    var l = document.getElementById("list")
-    if (l.style.display == "block"){
-        l.style.display = "none"
-    }else{
-        l.style.display = "block"
-    }
-}
+// function showList(){
+//     var l = document.getElementById("list")
+//     if (l.style.display == "block"){
+//         l.style.display = "none"
+//     }else{
+//         l.style.display = "block"
+//     }
+// }
 
 $(document).ready(function(){
     $(".hideBio").click(function(){
@@ -108,3 +108,20 @@ function validateForm(){
 if (window.location.pathname == "/index.html"){
     greetingFunc()
 }
+
+function getAdvice() {
+    // Send a request to the Advice Slip API to get random advice
+    fetch("https://api.adviceslip.com/advice")
+    .then(response => response.json()) // Convert the API response to a JavaScript object
+    .then(data => {
+    // Extract the "advice" text from the JSON response and display it on the webpage
+    document.getElementById("adviceText").innerText = data.slip.advice;
+    })
+    .catch(error => {
+    // If something goes wrong (like no internet), log the error in the console
+    console.error("Error fetching advice:", error);
+    // Display a user-friendly error message on the webpage
+    document.getElementById("adviceText").innerText = "Oops! Something went wrong. Try again.";
+    });
+    }
+    

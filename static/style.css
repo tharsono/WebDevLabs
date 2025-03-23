@@ -37,9 +37,9 @@ tbody tr:nth-child(odd){
     text-align: center;
 }
 
-#list {
+/* #list {
     display: none;
-}
+} */
 
 #bio{
     display: none;
@@ -51,3 +51,36 @@ tbody tr:nth-child(odd){
     font-weight: bold;
     color: #c58ea6;
 }
+
+.funIMG{
+    border-radius: 100%;
+}
+
+.container{
+    border-radius: 10%;
+    display: inline-block;
+}
+.container button{
+padding: 10px 15px;
+border: none;
+background-color:#c58ea6;
+color: white; 
+font-size: 16px; 
+border-radius: 5px;
+cursor: pointer;
+}
+
+#advice{
+    background-color: #c58ea6;
+}
+
+.mainLayout{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#item1, #item2, #item3, #item4 {
+    width: 40vw; 
+    margin: auto;
+    }  
